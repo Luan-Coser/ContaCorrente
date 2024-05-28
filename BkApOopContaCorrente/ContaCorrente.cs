@@ -58,5 +58,10 @@ namespace BkApOopContaCorrente
         {
             return Saldo;
         }
+
+        public void Transferencia()
+        {
+
+        }
     }
 }

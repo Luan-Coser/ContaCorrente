@@ -1,4 +1,6 @@
 ﻿using BkApOopContaCorrente;
+using static System.Net.Mime.MediaTypeNames;
+using System.Runtime.ConstrainedExecution;
 
 namespace BkApOopContaCorrenteTest
 {
@@ -123,6 +125,24 @@ namespace BkApOopContaCorrenteTest
 
             // Assert
             Assert.Equal(saldoEsperado, saldoAtual); // Verifica se o saldo retornado é igual ao saldo esperado
+        }
+
+        //Cenário: Transferência entre Contas
+        //Dado que uma conta corrente possui saldo de R$ 1000 E existe outra conta corrente com saldo de R$ 500
+        //Quando o cliente transfere R$ 300 da primeira conta para a segunda conta Então o saldo da primeira conta
+        //deve ser R$ 700 E o saldo da segunda conta deve ser R$ 800
+
+        [Fact]
+        public void TransferenciaEntreContas ()
+        {
+        ContaCorrente conta1 = new ContaCorrente();
+            conta1.Saldo = 1000;
+        ContaCorrente conta2 = new ContaCorrente();
+            conta2.Saldo = 500;
+
+        
+
+
         }
 
     }
