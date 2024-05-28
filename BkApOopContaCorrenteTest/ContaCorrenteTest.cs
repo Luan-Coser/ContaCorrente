@@ -107,5 +107,23 @@ namespace BkApOopContaCorrenteTest
         //Quando o cliente consulta o saldo da conta Então o saldo retornado deve ser R$ 1000
 
         //[Theory]
+        [Fact]
+
+        public void VerSaldo()
+        {
+
+            // Arrange
+            ContaCorrente contaCorrente = new ContaCorrente();
+            contaCorrente.Saldo = 1000m; // Define o saldo inicial como 1000
+
+            decimal saldoEsperado = 1000m; // Define o saldo esperado como 1000
+
+            // Act
+            decimal saldoAtual = contaCorrente.verSaldo(); // Chama o método verSaldo
+
+            // Assert
+            Assert.Equal(saldoEsperado, saldoAtual); // Verifica se o saldo retornado é igual ao saldo esperado
+        }
+
     }
 }

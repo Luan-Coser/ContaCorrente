@@ -53,5 +53,10 @@ namespace BkApOopContaCorrente
 
             return true;
         }
+
+        public decimal verSaldo()
+        {
+            return Saldo;
+        }
     }
 }
